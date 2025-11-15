@@ -112,8 +112,8 @@ Complete logout implementation that properly terminates both the local session a
 **Partially enabled.** Vite includes some security headers by default, but consider adding custom headers in `vite.config.ts`:
 
 ```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
@@ -125,7 +125,7 @@ export default defineConfig({
       'Referrer-Policy': 'strict-origin-when-cross-origin',
     },
   },
-})
+});
 ```
 
 At minimum, configure:
