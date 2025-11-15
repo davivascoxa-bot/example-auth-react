@@ -5,8 +5,8 @@ import { useAuth } from 'react-oidc-context';
 export default function IndexView() {
   const auth = useAuth();
 
-  const login = () => {
-    auth.signinRedirect();
+  const login = async () => {
+    await auth.signinRedirect();
   };
 
   return (

@@ -3,8 +3,8 @@ import { useAuth } from 'react-oidc-context';
 export default function SignOutButton() {
   const auth = useAuth();
 
-  const handleSignOut = () => {
-    auth.signoutRedirect({
+  const handleSignOut = async () => {
+    await auth.signoutRedirect({
       post_logout_redirect_uri:
         import.meta.env.VITE_ZITADEL_POST_LOGOUT_URL ||
         window.location.origin + '/',
